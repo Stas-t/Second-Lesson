@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/BoxComponent.h"
+#include "Components/AudioComponent.h"
+#include "Components/SceneComponent.h"
 #include "GameFramework/Actor.h"
 #include "MyActorCpp.generated.h"
 
@@ -23,8 +25,23 @@ protected:
 	UFUNCTION(BlueprintCallable)
 		void ChangeMesh(AActor* overlappingActor, UStaticMesh* newMesh);
 
+	UFUNCTION(BlueprintCallable)
+		void ChangeAudio(AActor* overlappingActor, USoundBase* NewSound);
+
+	UFUNCTION(BlueprintCallable)
+		void Paused(AActor* overlappingActor, UAudioComponent* Pause);
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+		USceneComponent* Scene;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+		UAudioComponent* Sound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+		UAudioComponent* Audio;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		UBoxComponent* BoxCollision;
