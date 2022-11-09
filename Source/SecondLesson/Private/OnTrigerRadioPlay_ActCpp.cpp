@@ -3,7 +3,7 @@
 
 #include "OnTrigerRadioPlay_ActCpp.h"
 
-void ARadioPlay_ActCpp::Paused(AActor* overlappingActor, UAudioComponent* Pause)
+void ARadioPlay_ActCpp::Paused_Implementation(AActor* overlappingActor, UAudioComponent* Pause)
 {
 	if (overlappingActor == GetWorld()->GetFirstPlayerController()->GetPawn())
 	{

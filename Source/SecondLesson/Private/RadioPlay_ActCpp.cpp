@@ -30,7 +30,7 @@ ARadioPlay_ActCpp::ARadioPlay_ActCpp()
 void ARadioPlay_ActCpp::BeginPlay()
 {
 	Super::BeginPlay();
-	Sound->SetPaused(true);
+	Sound->SetPaused(false);
 }
 
 // Called every frame

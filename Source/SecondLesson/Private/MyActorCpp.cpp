@@ -18,6 +18,7 @@ AMyActorCpp::AMyActorCpp()
 	Sound = CreateDefaultSubobject<UAudioComponent>(TEXT("Sound"));
 	Sound->SetupAttachment(Scene);
 
+
 	BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("MyBoxCollision"));
 	BoxCollision->InitBoxExtent(FVector(100, 100, 100));
 	BoxCollision->SetupAttachment(Scene);
@@ -28,7 +29,7 @@ AMyActorCpp::AMyActorCpp()
 void AMyActorCpp::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	Sound->SetPaused(true);
 }
 
 // Called every frame

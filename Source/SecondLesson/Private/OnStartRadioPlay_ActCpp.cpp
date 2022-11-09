@@ -4,8 +4,9 @@
 #include "OnStartRadioPlay_ActCpp.h"
 
 
-AOnStartRadioPlay_ActCpp::AOnStartRadioPlay_ActCpp()
-{
-	Sound = CreateDefaultSubobject<UAudioComponent>(TEXT("Sound"));
-	Sound->SetPaused(false);
-};
+void AOnStartRadioPlay_ActCpp::BeginPlay() {
+
+	Super::BeginPlay();
+	Sound->SetPaused(true);
+
+}

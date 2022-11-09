@@ -22,7 +22,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 		void Paused(AActor* overlappingActor, UAudioComponent* Pause);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")

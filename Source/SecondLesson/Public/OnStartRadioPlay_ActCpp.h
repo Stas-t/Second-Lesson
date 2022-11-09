@@ -14,5 +14,7 @@ class SECONDLESSON_API AOnStartRadioPlay_ActCpp : public ARadioPlay_ActCpp
 {
 	GENERATED_BODY()
 
+protected:
+		virtual void BeginPlay() override;
 	
 };
